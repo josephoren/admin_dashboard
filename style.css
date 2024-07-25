@@ -1,0 +1,171 @@
+body { padding: 0; margin: 0; }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: 100vh;
+}
+
+.header {
+    grid-area: 1 / 2 / 1 / 4;
+    display: grid;
+    border: 1px solid;
+    border-left: none;
+    grid-template-rows: 1fr 1fr;
+}
+
+.main {
+    grid-area: 2 / 2 / 7 / 3;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+}
+
+.main-side {
+    grid-area: 2 / 3 / 7 / 4;
+    display: grid;
+    grid-template-rows: repeat(2, minmax(150px, 1fr));
+}
+
+.main,
+.main-side {
+    background-color: lavender;
+}
+
+.sidebar {
+    display: grid;
+    grid-area: 1 / 1 / 7 / 1;
+    background-color: steelblue;
+    border: 1px solid;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    font-weight: bold;
+    min-width: 170px;
+}
+
+.card {
+    display: grid;
+    background-color: white;
+    margin: 20px;
+    border: 1px solid;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    place-items: center;
+}
+
+.content {
+    margin: 20px;
+}
+
+.title {
+    margin-bottom: -20px;
+    font-weight: bold;
+}
+
+.header-top {
+    grid-area: 1 / 1 / 1 / 4;
+    justify-self: start;
+}
+
+.header-top>div {
+    display: flex;
+}
+
+.search {
+    width: 300px;
+}
+
+
+.header-bottom {
+    grid-area: 2 / 1 / 2 / 4;
+}
+
+.header-top,
+.header-bottom {
+    display: grid;
+    place-items: center;
+    grid-auto-flow: column;
+}
+
+.btn-top {
+    background-color: steelblue;
+    width: 70px;
+    border-radius: 12px;
+    color: lavender;
+    font-weight: bold;
+}
+
+.navigation {
+    color: lavender;
+    margin-left: 10px;
+}
+
+.nav>p,
+.navigation>p {
+    display: flex;
+}
+
+nav>p {
+    font-size: 20px;
+}
+
+.nav-title {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.btn {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 25px;
+}
+
+.icons {
+    width: 10%;
+    height: auto;
+    margin-right: 10px;
+    min-width: 10%
+}
+
+.icons-search {
+    width: 4%;
+    height: auto;
+    min-width: 4%;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.icons-bell {
+    width: 6%;
+    height: auto;
+    min-width: 6%;
+    margin-right: 15px;
+    margin-left: 60px;
+}
+
+.icons-profile {
+    width: 7%;
+    height: auto;
+    min-width: 7%;
+}
+
+.profile-name {
+    font-size: 20px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.icons-welcome {
+    width: 7%;
+    height: auto;
+    min-width: 7%;
+    margin-right: 15px;
+}
+
+.header-bottom>div {
+    justify-self: start;
+    margin-left: 35px;
+    display: flex;
+
+}
+
+.profile-welcome {
+    font-size: 16px;
+    font-weight: bold;
+}
